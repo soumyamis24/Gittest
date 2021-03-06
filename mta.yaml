@@ -1,0 +1,26 @@
+ID: PikaBot
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: flp
+   type: com.sap.application.portal.content
+   path: flp
+   requires:
+    - name: portal_resources_PikaBot
+      parameters:
+         service-key:
+            name: content-deploy-key
+            config:
+               content-endpoint: developer
+         content-target: true
+    - name: uaa_PikaBot
+    - name: dt_PikaBot_appRouter
+    - name: PikaBotui_deployer
+
+resources:
+ - name: portal_resources_PikaBot
+   parameters:
+      service-plan: standard
+      service: portal
+   type: org.cloudfoundry.managed-service

@@ -1,0 +1,9 @@
+{
+	"applications": {},
+	"bootstrapPlugins": {
+		"Pikachu": {
+			"component": "com.pikachu.flp.plugin",
+			"url": "../../../../../"
+		}
+	}
+}
